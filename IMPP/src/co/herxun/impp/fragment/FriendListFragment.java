@@ -170,7 +170,7 @@ public class FriendListFragment extends BaseFragment implements Observer{
 		    	mActionDialog.dismiss();
 			}
 		});
-		view.findViewById(R.id.action_dialog_topic_btn).setOnClickListener(new OnClickListener(){
+		view.findViewById(R.id.action_dialog_event_btn).setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(ct,CreateEventActivity.class);
@@ -182,6 +182,21 @@ public class FriendListFragment extends BaseFragment implements Observer{
 		    	mActionDialog.dismiss();
 			}
 		});
+		view.findViewById(R.id.action_dialog_topic_btn).setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(ct,CreateTopicActivity.class);
+				Bundle b = new Bundle();
+				b.putString(Constant.INTENT_EXTRA_KEY_TOPIC_EDIT_TYPE, CreateTopicActivity.TYPE_CREATE);
+				i.putExtras(b);
+		    	ct.startActivity(i);
+				getActivity().overridePendingTransition(R.anim.slide_in_right,android.R.anim.fade_out);
+		    	mActionDialog.dismiss();
+			}
+		});
+
+		
+		
 		
 		dialogBuiler.setView(view);
 		mActionDialog = dialogBuiler.create();

@@ -106,10 +106,14 @@ public class CreatePostActivity extends BaseActivity {
 		imgTakePic.setImageResource(R.drawable.dialog_camera);
 		ImageView imgPickPic = (ImageView) view.findViewById(R.id.dialog_img2);
 		imgPickPic.setImageResource(R.drawable.dialog_upload);
+		ImageView imgPickPic1 = (ImageView) view.findViewById(R.id.dialog_img3);
+		imgPickPic1.setImageResource(R.drawable.dialog_upload);
 		TextView textTakePic = (TextView) view.findViewById(R.id.dialog_text1);
 		textTakePic.setText(R.string.chat_take_picture);
-		TextView textPickPic = (TextView) view.findViewById(R.id.dialog_text2);
+		TextView textPickPic = (TextView) view.findViewById(R.id.dialog_textevent);
 		textPickPic.setText(R.string.chat_pick_picture);
+		TextView textPickPic1 = (TextView) view.findViewById(R.id.dialog_text2);
+		textPickPic1.setText(R.string.chat_pick_picture);
 		view.findViewById(R.id.action_dialog_friend_btn).setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -130,6 +134,17 @@ public class CreatePostActivity extends BaseActivity {
 				}
 			}
 		});
+		view.findViewById(R.id.action_dialog_event_btn).setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				mActionDialog.dismiss();
+				
+				Intent intent = new Intent();
+				intent.setType("image/*");
+				intent.setAction(Intent.ACTION_GET_CONTENT);
+				startActivityForResult(Intent.createChooser(intent, ""), Constant.REQUESTCODE_PHOTO_PICK);
+			}
+		});
 		view.findViewById(R.id.action_dialog_topic_btn).setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -141,7 +156,7 @@ public class CreatePostActivity extends BaseActivity {
 				startActivityForResult(Intent.createChooser(intent, ""), Constant.REQUESTCODE_PHOTO_PICK);
 			}
 		});
-		
+
 		
 		
 		dialogBuiler.setView(view);

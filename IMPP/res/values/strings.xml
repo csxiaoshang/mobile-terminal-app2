@@ -27,7 +27,7 @@
     <string name="friend_friend_list">好友列表</string>
     <string name="friend_friend_request">好友请求</string>
     <string name="friend_action_new_friend">加入新好友</string>
-    <string name="friend_action_new_topic">发布活动</string>
+    <string name="friend_action_new_event">发布活动</string>
     <string name="friend_search_username">搜寻好友名称</string>
     <string name="friend_request_status_add">加入好友</string>
     <string name="friend_request_status_sent">送出请求</string>
@@ -62,7 +62,7 @@
     <string name="chat_record_release_to_cancel">放开以取消传送</string>
     <string name="chat_send">送出</string>
     <string name="chat_record_cancel">取消</string>
-    <string name="chat_topic_edit">编辑群组名称</string>
+    <string name="event__type_edit">编辑活动类型</string>
     <string name="chat_topic_invite">邀请成员</string>
     <string name="chat_topic_leave">退出群组</string>
     <string name="chat_topic_leave_owner">退出群组并解散群组</string>
@@ -112,6 +112,7 @@
     <string name="wall_create_number">活动人数限制</string>
     <string name="wall_create_place">活动地点</string>
     <string name="event_title">已发布的活动</string>
+    <string name="friend_action_new_topic">创建群组聊天</string>
  	
 
 </resources>

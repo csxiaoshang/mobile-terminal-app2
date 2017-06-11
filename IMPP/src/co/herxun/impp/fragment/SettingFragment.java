@@ -76,7 +76,7 @@ public class SettingFragment extends BaseFragment {
 		imgPickPic.setImageResource(R.drawable.dialog_upload);
 		TextView textTakePic = (TextView) view.findViewById(R.id.dialog_text1);
 		textTakePic.setText(R.string.chat_take_picture);
-		TextView textPickPic = (TextView) view.findViewById(R.id.dialog_text2);
+		TextView textPickPic = (TextView) view.findViewById(R.id.dialog_textevent);
 		textPickPic.setText(R.string.chat_pick_picture);
 		view.findViewById(R.id.action_dialog_friend_btn).setOnClickListener(new OnClickListener(){
 			@Override
@@ -98,6 +98,17 @@ public class SettingFragment extends BaseFragment {
 				}
 			}
 		});
+		view.findViewById(R.id.action_dialog_event_btn).setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				mActionDialog.dismiss();
+				
+				Intent intent = new Intent();
+				intent.setType("image/*");
+				intent.setAction(Intent.ACTION_GET_CONTENT);
+				startActivityForResult(Intent.createChooser(intent, ""), Constant.REQUESTCODE_PHOTO_PICK);
+			}
+		});
 		view.findViewById(R.id.action_dialog_topic_btn).setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -109,7 +120,7 @@ public class SettingFragment extends BaseFragment {
 				startActivityForResult(Intent.createChooser(intent, ""), Constant.REQUESTCODE_PHOTO_PICK);
 			}
 		});
-		
+
 		
 		
 		dialogBuiler.setView(view);

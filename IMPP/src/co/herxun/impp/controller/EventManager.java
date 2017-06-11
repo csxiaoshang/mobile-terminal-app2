@@ -165,7 +165,7 @@ public class EventManager extends Observable{
 			   params.put("title", str_type);
 			   params.put("information", info);
 			   params.put("start_time", time);
-			   params.put("stop_time", time);
+			   params.put("stop_time", time);			  
 			   AnSocial anSocial = ((IMppApp)context.getApplicationContext()).anSocial;
 			   anSocial.sendRequest("events/create.json", AnSocialMethod.POST, params,new IAnSocialCallback() {
 			           @Override
