@@ -1,0 +1,6 @@
+diff a/IMPP/gen/.gitignore b/IMPP/gen/.gitignore	(rejected hunks)
+@@ -2,3 +3,3 @@
++/android/
+ /co/
+ /.gitignore
+-/android/

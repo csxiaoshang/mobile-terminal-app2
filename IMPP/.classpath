@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="D:/AndroidStudioProjects/hpl/IMPP/libs/AMap3DMap_5.0.0_AMapNavi_5.0.1_AMapSearch_5.0.0_AMapLocation_3.4.0_20170427.jar"/>
+	<classpathentry kind="lib" path="D:/AndroidStudioProjects/hpl/IMPP/libs/ActiveAndroid.jar"/>
+	<classpathentry kind="lib" path="D:/AndroidStudioProjects/hpl/IMPP/libs/arrownock-android-sdk-2.24.2.jar"/>
+	<classpathentry kind="lib" path="D:/AndroidStudioProjects/hpl/IMPP/libs/locSDK_4.2.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <co.herxun.impp.view.AppBar
+        android:id="@+id/create_post_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/no1" >
+    </co.herxun.impp.view.AppBar>
+
+    <RelativeLayout
+        android:id="@+id/wall_create_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            
+            android:layout_below="@+id/btn_choosetype"
+            android:background="@color/no7" />
+
+        <Button
+            android:id="@+id/btn_choosetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="28dp"
+            android:text="选择活动类型" />
+
+        <TextView
+            android:id="@+id/typeDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:text="活动类型"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    
+      <EditText
+        android:id="@+id/wall_create_et2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/wall_create_content"
+        android:padding="16dp"
+        android:textColor="@color/no10"
+        android:textColorHint="@color/no8" >
+
+        <requestFocus />
+    </EditText>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/wall_create_et2"
+        android:background="@color/no7" />
+
+    <RelativeLayout
+                android:id="@+id/explore_btn_wall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view3"
+        android:layout_marginBottom="10dp" 
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center"
+        android:text="活动开始时间" 
+        android:textSize="17sp"/>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_choose"
+        android:background="@color/no7" />
+
+    <Button
+        android:id="@+id/btn_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:text="选择活动时间" />
+
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+                android:id="@+id/explore_btn_wall4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+    <TextView
+        android:id="@+id/placeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view4"
+        android:layout_marginBottom="10dp" 
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center"
+        android:text="活动地点" 
+        android:textSize="17sp"/>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_chooseplace"
+        android:background="@color/no7" />
+
+    <Button
+        android:id="@+id/btn_chooseplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:text="选择活动地点" />
+
+    </RelativeLayout>
+    
+     
+
+    
+    
+    <Button
+        android:id="@+id/btn_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="28dp"
+        android:text="发布活动" />
+    
+</LinearLayout>
