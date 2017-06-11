@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.AMap.OnCameraChangeListener;
@@ -15,6 +16,7 @@ import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.LatLngBounds;
 import com.amap.api.maps.model.VisibleRegion;
+
 import co.herxun.impp.R;
 
 /**
@@ -107,6 +109,7 @@ public class EventsActivity extends Activity implements
 	public void onMapLongClick(LatLng point) {
 		
 		Latlon =String.valueOf(point);
+		Toast.makeText(EventsActivity.this, "位置已选择，请返回！", Toast.LENGTH_LONG).show();
 		
 	}
 

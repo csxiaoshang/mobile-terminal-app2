@@ -74,6 +74,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EventActivity extends BaseActivity implements OnClickListener,
 OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
@@ -90,7 +91,7 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 	private CheckBox mStyleCheckbox;
 	private Marker marker2;// marker对象2
 	private Marker marker3;// marker对象3
-	
+	String Latlon; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -240,15 +241,8 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 	@Override
 	public void onMapLongClick(LatLng point) {
 				
-		MarkerOptions markerOption = new MarkerOptions();
-	    markerOption.position(point);
-	    markerOption.title("西安市").snippet("西安市：34.341568, 108.940174");
-
-	    markerOption.draggable(true);//设置Marker可拖动
-	    markerOption.icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory
-	        .decodeResource(getResources(),R.drawable.icon_geo)));
-	    // 将Marker设置为贴地显示，可以双指下拉地图查看效果
-	    markerOption.setFlat(true);//设置marker平贴地图效果
+		Latlon =String.valueOf(point);
+		Toast.makeText(EventActivity.this, "位置已选择，请返回！", Toast.LENGTH_LONG).show();
 		
 	}
 	

@@ -101,7 +101,7 @@ public class CreateEventActivity extends Activity
 			{
 				//选择活动地点
 				//*********************************************************************************//
-				Intent i = new Intent(CreateEventActivity.this,EventActivity.class);
+				Intent i = new Intent(CreateEventActivity.this,LocationActivity.class);
 				startActivity(i);
 				
 			}
@@ -112,7 +112,7 @@ public class CreateEventActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				//创建群组
+				/*//创建群组
 				String topicName = "";
 				Set<String> members = mUserChooseListAdapter.getChosenUser();
 				members.add(UserManager.getInstance(v.getContext()).getCurrentUser().clientId);
@@ -120,7 +120,7 @@ public class CreateEventActivity extends Activity
 					topicName += UserManager.getInstance(v.getContext()).getUserByClientId(member).userName+",";
 				}
 				topicName = topicName.substring(0,topicName.length()-1);
-				IMManager.getInstance(v.getContext()).createTopic(topicName,members);
+				IMManager.getInstance(v.getContext()).createTopic(topicName,members);*/
 				//创建事件
 				createEvent();
 			}
