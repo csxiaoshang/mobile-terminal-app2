@@ -160,7 +160,7 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 		//aMap.setInfoWindowAdapter(this);// 设置自定义InfoWindow样式
 		addMarkersToMap();// 往地图上添加marker
 		//setMapCustomStyleFile(this);
-		basicmap = (Button)findViewById(R.id.basicmap);
+		/*basicmap = (Button)findViewById(R.id.basicmap);
 		basicmap.setOnClickListener(this);
 		rsmap = (Button)findViewById(R.id.rsmap);
 		rsmap.setOnClickListener(this);
@@ -168,14 +168,14 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 		nightmap.setOnClickListener(this);
 		navimap = (Button)findViewById(R.id.navimap);
 		navimap.setOnClickListener(this);
-		mStyleCheckbox = (CheckBox) findViewById(R.id.check_style);
+		mStyleCheckbox = (CheckBox) findViewById(R.id.check_style);*/
 
-		mStyleCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+		/*mStyleCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 				aMap.setMapCustomEnable(b);
 			}
-		});
+		});*/
 
 	}
 	/**
@@ -241,8 +241,8 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 	@Override
 	public void onMapLongClick(LatLng point) {
 				
-		Latlon =String.valueOf(point);
-		Toast.makeText(EventActivity.this, "位置已选择，请返回！", Toast.LENGTH_LONG).show();
+	/*	Latlon =String.valueOf(point);
+		Toast.makeText(EventActivity.this, "位置已选择，请返回！", Toast.LENGTH_LONG).show();*/
 		
 	}
 	
