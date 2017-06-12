@@ -87,7 +87,7 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 	private Button rsmap;
 	private Button nightmap;
 	private Button navimap;
-	private MarkerOptions markerOption;
+	private MarkerOptions mark1;
 	private CheckBox mStyleCheckbox;
 	private Marker marker2;// marker对象2
 	private Marker marker3;// marker对象3
@@ -183,7 +183,7 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 	 */
 	private void addMarkersToMap() {
 		// 文字显示标注，可以设置显示内容，位置，字体大小颜色，背景色旋转角度
-		TextOptions textOptions = new TextOptions()
+		/*TextOptions textOptions = new TextOptions()
 				.position(Constants.BEIJING)
 				.text("Text")
 				.fontColor(Color.BLACK)
@@ -192,23 +192,79 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 				.rotate(20)
 				.align(Text.ALIGN_CENTER_HORIZONTAL, Text.ALIGN_CENTER_VERTICAL)
 				.zIndex(1.f).typeface(Typeface.DEFAULT_BOLD);
-		aMap.addText(textOptions);
+		aMap.addText(textOptions);*/
+		
+		Marker marker1 = aMap.addMarker(new MarkerOptions().position(Constants.xinyuewangka).title("世代网咖，你永远的家").snippet("组织人：ashang").icon(
+				// BitmapDescriptorFactory
+				// .fromResource(R.drawable.location_marker)
+						BitmapDescriptorFactory.fromBitmap(BitmapFactory
+								.decodeResource(getResources(),
+										R.drawable.icon_geo))));
+		Marker marker2 = aMap.addMarker(new MarkerOptions().position(Constants.jiajiayuan).title("购物").snippet("组织人：xxuan").icon(
+				// BitmapDescriptorFactory
+				// .fromResource(R.drawable.location_marker)
+						BitmapDescriptorFactory.fromBitmap(BitmapFactory
+								.decodeResource(getResources(),
+										R.drawable.icon_geo))));
+		Marker marker3 = aMap.addMarker(new MarkerOptions().position(Constants.huangmenji).title("吃饭").snippet("组织人：lili").icon(
+				// BitmapDescriptorFactory
+				// .fromResource(R.drawable.location_marker)
+						BitmapDescriptorFactory.fromBitmap(BitmapFactory
+								.decodeResource(getResources(),
+										R.drawable.icon_geo))));
+		
+		Marker marker4 = aMap.addMarker(new MarkerOptions().position(Constants.xiaozhushan).title("爬山").snippet("组织人：ashang").icon(
+				// BitmapDescriptorFactory
+				// .fromResource(R.drawable.location_marker)
+						BitmapDescriptorFactory.fromBitmap(BitmapFactory
+								.decodeResource(getResources(),
+										R.drawable.icon_geo))));
+		
+		
+		
+/*		MarkerOptions  mark1 = new MarkerOptions();
+		mark1.position(Constants.xinyuewangka);
+		mark1.title("世代网咖，你永远的家").snippet("组织人：ashang！！");
 
-		markerOption = new MarkerOptions();
-		markerOption.position(Constants.xinyuewangka);
-		markerOption.title("战斗吧，少年").snippet("快来，打定级赛了！！");
-
-		markerOption.draggable(true);
-		markerOption.icon(
+		mark1.draggable(true);
+		mark1.icon(
 		// BitmapDescriptorFactory
 		// .fromResource(R.drawable.location_marker)
 				BitmapDescriptorFactory.fromBitmap(BitmapFactory
 						.decodeResource(getResources(),
 								R.drawable.icon_geo)));
 		// 将Marker设置为贴地显示，可以双指下拉看效果
-		markerOption.setFlat(true);
+		mark1.setFlat(true);
+		
+		MarkerOptions mark2 = new MarkerOptions();
+		mark2.position(Constants.jiajiayuan);
+		mark2.title("购物").snippet("组织人：xxuan");
 
-		ArrayList<BitmapDescriptor> giflist = new ArrayList<BitmapDescriptor>();
+		mark2.draggable(true);
+		mark2.icon(
+		// BitmapDescriptorFactory
+		// .fromResource(R.drawable.location_marker)
+				BitmapDescriptorFactory.fromBitmap(BitmapFactory
+						.decodeResource(getResources(),
+								R.drawable.icon_geo)));
+		// 将Marker设置为贴地显示，可以双指下拉看效果
+		mark2.setFlat(true);
+		
+		MarkerOptions mark3  = new MarkerOptions();
+		mark3.position(Constants.huangmenji);
+		mark3.title("吃饭").snippet("组织人：lili");
+
+		mark3.draggable(true);
+		mark3.icon(
+		// BitmapDescriptorFactory
+		// .fromResource(R.drawable.location_marker)
+				BitmapDescriptorFactory.fromBitmap(BitmapFactory
+						.decodeResource(getResources(),
+								R.drawable.icon_geo)));
+		// 将Marker设置为贴地显示，可以双指下拉看效果
+		mark3.setFlat(true);*/
+
+		/*ArrayList<BitmapDescriptor> giflist = new ArrayList<BitmapDescriptor>();
 		giflist.add(BitmapDescriptorFactory
 				.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
 		giflist.add(BitmapDescriptorFactory
@@ -218,14 +274,14 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener {
 
 		MarkerOptions markerOption1 = new MarkerOptions().anchor(0.5f, 0.5f)
 				.position(Constants.jiajiayuan).title("购物")
-				.snippet("小姐姐陪你shopping").icons(giflist)
+				.snippet("组织人：刘睿瑄等人").icons(giflist)
 				.draggable(true).period(10);
 		ArrayList<MarkerOptions> markerOptionlst = new ArrayList<MarkerOptions>();
 		markerOptionlst.add(markerOption);
 		markerOptionlst.add(markerOption1);
 		List<Marker> markerlst = aMap.addMarkers(markerOptionlst, true);
 		marker2 = markerlst.get(0);
-		marker3= markerlst.get(1);
+		marker3= markerlst.get(1);*/
 		//marker3.showInfoWindow();
 		//marker2.showInfoWindow();
 		

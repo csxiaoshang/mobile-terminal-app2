@@ -32,4 +32,7 @@ public class Constants {
 	public static final LatLng ZHENGZHOU = new LatLng(34.7466, 113.625367);// 郑州市经纬度
 	public static final LatLng jiajiayuan = new LatLng(35.952776, 120.185317);
 	public static final LatLng xinyuewangka = new LatLng(35.946232, 120.171037);
+	public static final LatLng huangmenji = new LatLng(35.952776, 120.171037);
+	public static final LatLng xiaozhushan = new LatLng(35.971743, 120.095356);
+	
 }

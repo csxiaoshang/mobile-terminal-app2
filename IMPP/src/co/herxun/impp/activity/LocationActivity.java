@@ -111,7 +111,7 @@ OnPOIClickListener,OnInfoWindowClickListener,OnMapLongClickListener{
 		//aMap.setOnMarkerClickListener(this);// 设置点击marker事件监听器
 		//aMap.setOnInfoWindowClickListener(this);// 设置点击infoWindow事件监听器
 		//aMap.setInfoWindowAdapter(this);// 设置自定义InfoWindow样式
-		addMarkersToMap();// 往地图上添加marker
+		//addMarkersToMap();// 往地图上添加marker
 		//setMapCustomStyleFile(this);
 		basicmap = (Button)findViewById(R.id.basicmap);
 		basicmap.setOnClickListener(this);
